@@ -1,0 +1,13 @@
+<ul>
+<% @restaurant.reviews.each do |review| %>
+  <li>
+  <% review.rating.times do %>
+    <i class="fa fa-star" style="color: #ffd749;"></i>
+  <% end %>
+  <% (5 - review.rating).times do %>
+    <i class="fa fa-star" style="color: #ccc;"></i>
+  <% end %> <br>
+  <%= review.content %>
+  </li>
+<% end %>
+</ul>
