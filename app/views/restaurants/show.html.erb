@@ -11,8 +11,12 @@
 <ul>
 <% @restaurant.reviews.each do |review| %>
   <li>
-  <%= review.rating %>
+  <h4><%= review.rating %> stars</h4>
   <%= review.content %>
   </li>
 <% end %>
 </ul>
+
+<%= link_to "Write a new review", new_restaurant_review_path(@restaurant) %>
+<br>
+<%= link_to "Go back to restaurants", restaurants_path %>
